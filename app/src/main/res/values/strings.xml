@@ -5,4 +5,5 @@
     <string name="CODWarzone">Call of duty Warzone</string>
     <string name="apex">Apex legends</string>
     <string name="pubg">Players unknown battlegrounds</string>
+    <string name="select_a_category">Select a category</string>
 </resources>
