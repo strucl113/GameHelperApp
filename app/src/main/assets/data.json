@@ -1,6 +1,5 @@
 [
   ["Caliber","Name","Flesh\ndamage","Penetration\npower","Armor\ndamage %","Accuracy\n%","Recoil\n%","Fragmentation\nchance*",1,2,3,4,5,6  ],
-  ["","","","","","","","",null,null,null,null,null,null  ],
   ["12/70 shot","12/70 5.25mm Buckshot**","8x34","1","15","","","0%",3,3,3,3,3,3  ],
   ["12/70 8.5 mm \"Magnum\" Buckshot**","8x44","2","26","-15","+115","0%","3",3,3,3,3,3,null  ],
   ["12x70 6.5 mm \"Express\" Buckshot**","9x29","3","26","+15","","0%","3",3,3,3,3,3,null  ],
