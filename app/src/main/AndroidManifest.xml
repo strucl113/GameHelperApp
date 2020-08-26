@@ -27,7 +27,7 @@
         </activity>
 
         <activity
-            android:name=".EFT_Menu"
+            android:name=".Menu_select"
             android:parentActivityName=".GameSelectActivity">
 
         </activity>

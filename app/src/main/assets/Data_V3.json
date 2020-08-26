@@ -1,0 +1,838 @@
+[
+  {
+    "Game": "Escape from tarkov",
+    "Ammo": [
+      {
+        "Name": "12/70 shot",
+        "types": [
+          {
+            "Name": "12/70 5.25mm Buckshot",
+            "FleshDamage": "8x37",
+            "PenetrationPower": "1",
+            "ArmorDamage": "15",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12/70 8.5 mm 'Magnum' Buckshot",
+            "FleshDamage": "8x50",
+            "PenetrationPower": "2",
+            "ArmorDamage": "26",
+            "Accuracy": "-15",
+            "Recoil": "+115",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12x70 6.5 mm 'Express' Buckshot",
+            "FleshDamage": "9x35",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "+15",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12x70 7mm Buckshot",
+            "FleshDamage": "8x39",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12/70 Flechette",
+            "FleshDamage": "8x39",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          }
+        ]
+      },
+      {
+        "Name": "12/70 slugs",
+        "types": [
+          {
+            "Name": "12x70 RIP",
+            "FleshDamage": "265",
+            "PenetrationPower": "0",
+            "ArmorDamage": "11",
+            "Accuracy": "80",
+            "Recoil": "35",
+            "FragmentationChance": "100"
+          },
+          {
+            "Name": "12/70 HP Slug 'SuperFormance'",
+            "FleshDamage": "220",
+            "PenetrationPower": "2",
+            "ArmorDamage": "12",
+            "Accuracy": "+170",
+            "Recoil": "-15",
+            "FragmentationChance": "39"
+          },
+          {
+            "Name": "12/70 Grizzly 40 Slug",
+            "FleshDamage": "190",
+            "PenetrationPower": "12",
+            "ArmorDamage": "48",
+            "Accuracy": "+80",
+            "Recoil": "+20",
+            "FragmentationChance": "12"
+          },
+          {
+            "Name": "12/70 HP Slug Copper Sabot Premier",
+            "FleshDamage": "206",
+            "PenetrationPower": "14",
+            "ArmorDamage": "46",
+            "Accuracy": "+150",
+            "Recoil": "+10",
+            "FragmentationChance": "38"
+          },
+          {
+            "Name": "12x70 Led slug",
+            "FleshDamage": "167",
+            "PenetrationPower": "15",
+            "ArmorDamage": "55",
+            "Accuracy": "120",
+            "Recoil": "0",
+            "FragmentationChance": "20"
+          }
+        ]
+      },
+      {
+        "Name": "Type 3",
+        "types": [
+          {
+            "Name": "Ammo31",
+            "FleshDamage": "265",
+            "PenetrationPower": "0",
+            "ArmorDamage": "11",
+            "Accuracy": "80",
+            "Recoil": "35",
+            "FragmentationChance": "100"
+          },
+          {
+            "Name": "Ammo32",
+            "FleshDamage": "220",
+            "PenetrationPower": "2",
+            "ArmorDamage": "12",
+            "Accuracy": "170",
+            "Recoil": "-15",
+            "FragmentationChance": "39"
+          },
+          {
+            "Name": "Ammo33",
+            "FleshDamage": "190",
+            "PenetrationPower": "12",
+            "ArmorDamage": "48",
+            "Accuracy": "80",
+            "Recoil": "20",
+            "FragmentationChance": "12"
+          },
+          {
+            "Name": "Ammo34",
+            "FleshDamage": "206",
+            "PenetrationPower": "14",
+            "ArmorDamage": "46",
+            "Accuracy": "150",
+            "Recoil": "10",
+            "FragmentationChance": "38"
+          },
+          {
+            "Name": "Ammo35",
+            "FleshDamage": "167",
+            "PenetrationPower": "15",
+            "ArmorDamage": "55",
+            "Accuracy": "120",
+            "Recoil": "0",
+            "FragmentationChance": "20"
+          }
+        ]
+      }
+    ],
+    "Helmets": [
+      {
+        "name": "Helmet 1",
+        "Armor": "100",
+        "Addons": "no"
+      },
+      {
+        "name": "Helmet 2",
+        "Armor": "200",
+        "Addons": "no"
+      },
+      {
+        "name": "Helmet 3",
+        "Armor": "50",
+        "Addons": "yes"
+      },
+      {
+        "name": "Helmet 4",
+        "Armor": "400",
+        "Addons": "yes"
+      },
+      {
+        "name": "Helmet 6",
+        "Armor": "100",
+        "Addons": "yes"
+      }
+    ],
+    "Armors": [
+      {
+        "name": "Armor 1",
+        "Armor": "100",
+        "Material": "kevlar"
+      },
+      {
+        "name": "Armor 2",
+        "Armor": "200",
+        "Material": "kevlar"
+      },
+      {
+        "name": "Armor 3",
+        "Armor": "50",
+        "Material": "Ceramics"
+      },
+      {
+        "name": "Armor 4",
+        "Armor": "400",
+        "Material": "Ceramics"
+      },
+      {
+        "name": "Armor 6",
+        "Armor": "100",
+        "Material": "Ceramics"
+      }
+    ]
+  },
+  {
+    "Game": "PUBG",
+    "Ammo": [
+      {
+        "Name": "12/70 shot",
+        "types": [
+          {
+            "Name": "12/70 5.25mm Buckshot",
+            "FleshDamage": "8x37",
+            "PenetrationPower": "1",
+            "ArmorDamage": "15",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12/70 8.5 mm 'Magnum' Buckshot",
+            "FleshDamage": "8x50",
+            "PenetrationPower": "2",
+            "ArmorDamage": "26",
+            "Accuracy": "-15",
+            "Recoil": "+115",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12x70 6.5 mm 'Express' Buckshot",
+            "FleshDamage": "9x35",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "+15",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12x70 7mm Buckshot",
+            "FleshDamage": "8x39",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12/70 Flechette",
+            "FleshDamage": "8x39",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          }
+        ]
+      },
+      {
+        "Name": "12/70 slugs",
+        "types": [
+          {
+            "Name": "12x70 RIP",
+            "FleshDamage": "265",
+            "PenetrationPower": "0",
+            "ArmorDamage": "11",
+            "Accuracy": "80",
+            "Recoil": "35",
+            "FragmentationChance": "100"
+          },
+          {
+            "Name": "12/70 HP Slug 'SuperFormance'",
+            "FleshDamage": "220",
+            "PenetrationPower": "2",
+            "ArmorDamage": "12",
+            "Accuracy": "+170",
+            "Recoil": "-15",
+            "FragmentationChance": "39"
+          },
+          {
+            "Name": "12/70 Grizzly 40 Slug",
+            "FleshDamage": "190",
+            "PenetrationPower": "12",
+            "ArmorDamage": "48",
+            "Accuracy": "+80",
+            "Recoil": "+20",
+            "FragmentationChance": "12"
+          },
+          {
+            "Name": "12/70 HP Slug Copper Sabot Premier",
+            "FleshDamage": "206",
+            "PenetrationPower": "14",
+            "ArmorDamage": "46",
+            "Accuracy": "+150",
+            "Recoil": "+10",
+            "FragmentationChance": "38"
+          },
+          {
+            "Name": "12x70 Led slug",
+            "FleshDamage": "167",
+            "PenetrationPower": "15",
+            "ArmorDamage": "55",
+            "Accuracy": "120",
+            "Recoil": "0",
+            "FragmentationChance": "20"
+          }
+        ]
+      },
+      {
+        "Name": "Type 3",
+        "types": [
+          {
+            "Name": "Ammo31",
+            "FleshDamage": "265",
+            "PenetrationPower": "0",
+            "ArmorDamage": "11",
+            "Accuracy": "80",
+            "Recoil": "35",
+            "FragmentationChance": "100"
+          },
+          {
+            "Name": "Ammo32",
+            "FleshDamage": "220",
+            "PenetrationPower": "2",
+            "ArmorDamage": "12",
+            "Accuracy": "170",
+            "Recoil": "-15",
+            "FragmentationChance": "39"
+          },
+          {
+            "Name": "Ammo33",
+            "FleshDamage": "190",
+            "PenetrationPower": "12",
+            "ArmorDamage": "48",
+            "Accuracy": "80",
+            "Recoil": "20",
+            "FragmentationChance": "12"
+          },
+          {
+            "Name": "Ammo34",
+            "FleshDamage": "206",
+            "PenetrationPower": "14",
+            "ArmorDamage": "46",
+            "Accuracy": "150",
+            "Recoil": "10",
+            "FragmentationChance": "38"
+          },
+          {
+            "Name": "Ammo35",
+            "FleshDamage": "167",
+            "PenetrationPower": "15",
+            "ArmorDamage": "55",
+            "Accuracy": "120",
+            "Recoil": "0",
+            "FragmentationChance": "20"
+          }
+        ]
+      }
+    ],
+    "Helmets": [
+      {
+        "name": "Helmet 1",
+        "Armor": "100",
+        "Addons": "no"
+      },
+      {
+        "name": "Helmet 2",
+        "Armor": "200",
+        "Addons": "no"
+      },
+      {
+        "name": "Helmet 3",
+        "Armor": "50",
+        "Addons": "yes"
+      },
+      {
+        "name": "Helmet 4",
+        "Armor": "400",
+        "Addons": "yes"
+      },
+      {
+        "name": "Helmet 6",
+        "Armor": "100",
+        "Addons": "yes"
+      }
+    ],
+    "Armors": [
+      {
+        "name": "Armor 1",
+        "Armor": "100",
+        "Material": "kevlar"
+      },
+      {
+        "name": "Armor 2",
+        "Armor": "200",
+        "Material": "kevlar"
+      },
+      {
+        "name": "Armor 3",
+        "Armor": "50",
+        "Material": "Ceramics"
+      },
+      {
+        "name": "Armor 4",
+        "Armor": "400",
+        "Material": "Ceramics"
+      },
+      {
+        "name": "Armor 6",
+        "Armor": "100",
+        "Material": "Ceramics"
+      }
+    ]
+  },
+  {
+    "Game": "COD",
+    "Ammo": [
+      {
+        "Name": "12/70 shot",
+        "types": [
+          {
+            "Name": "12/70 5.25mm Buckshot",
+            "FleshDamage": "8x37",
+            "PenetrationPower": "1",
+            "ArmorDamage": "15",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12/70 8.5 mm 'Magnum' Buckshot",
+            "FleshDamage": "8x50",
+            "PenetrationPower": "2",
+            "ArmorDamage": "26",
+            "Accuracy": "-15",
+            "Recoil": "+115",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12x70 6.5 mm 'Express' Buckshot",
+            "FleshDamage": "9x35",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "+15",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12x70 7mm Buckshot",
+            "FleshDamage": "8x39",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12/70 Flechette",
+            "FleshDamage": "8x39",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          }
+        ]
+      },
+      {
+        "Name": "12/70 slugs",
+        "types": [
+          {
+            "Name": "12x70 RIP",
+            "FleshDamage": "265",
+            "PenetrationPower": "0",
+            "ArmorDamage": "11",
+            "Accuracy": "80",
+            "Recoil": "35",
+            "FragmentationChance": "100"
+          },
+          {
+            "Name": "12/70 HP Slug 'SuperFormance'",
+            "FleshDamage": "220",
+            "PenetrationPower": "2",
+            "ArmorDamage": "12",
+            "Accuracy": "+170",
+            "Recoil": "-15",
+            "FragmentationChance": "39"
+          },
+          {
+            "Name": "12/70 Grizzly 40 Slug",
+            "FleshDamage": "190",
+            "PenetrationPower": "12",
+            "ArmorDamage": "48",
+            "Accuracy": "+80",
+            "Recoil": "+20",
+            "FragmentationChance": "12"
+          },
+          {
+            "Name": "12/70 HP Slug Copper Sabot Premier",
+            "FleshDamage": "206",
+            "PenetrationPower": "14",
+            "ArmorDamage": "46",
+            "Accuracy": "+150",
+            "Recoil": "+10",
+            "FragmentationChance": "38"
+          },
+          {
+            "Name": "12x70 Led slug",
+            "FleshDamage": "167",
+            "PenetrationPower": "15",
+            "ArmorDamage": "55",
+            "Accuracy": "120",
+            "Recoil": "0",
+            "FragmentationChance": "20"
+          }
+        ]
+      },
+      {
+        "Name": "Type 3",
+        "types": [
+          {
+            "Name": "Ammo31",
+            "FleshDamage": "265",
+            "PenetrationPower": "0",
+            "ArmorDamage": "11",
+            "Accuracy": "80",
+            "Recoil": "35",
+            "FragmentationChance": "100"
+          },
+          {
+            "Name": "Ammo32",
+            "FleshDamage": "220",
+            "PenetrationPower": "2",
+            "ArmorDamage": "12",
+            "Accuracy": "170",
+            "Recoil": "-15",
+            "FragmentationChance": "39"
+          },
+          {
+            "Name": "Ammo33",
+            "FleshDamage": "190",
+            "PenetrationPower": "12",
+            "ArmorDamage": "48",
+            "Accuracy": "80",
+            "Recoil": "20",
+            "FragmentationChance": "12"
+          },
+          {
+            "Name": "Ammo34",
+            "FleshDamage": "206",
+            "PenetrationPower": "14",
+            "ArmorDamage": "46",
+            "Accuracy": "150",
+            "Recoil": "10",
+            "FragmentationChance": "38"
+          },
+          {
+            "Name": "Ammo35",
+            "FleshDamage": "167",
+            "PenetrationPower": "15",
+            "ArmorDamage": "55",
+            "Accuracy": "120",
+            "Recoil": "0",
+            "FragmentationChance": "20"
+          }
+        ]
+      }
+    ],
+    "Helmets": [
+      {
+        "name": "Helmet 1",
+        "Armor": "100",
+        "Addons": "no"
+      },
+      {
+        "name": "Helmet 2",
+        "Armor": "200",
+        "Addons": "no"
+      },
+      {
+        "name": "Helmet 3",
+        "Armor": "50",
+        "Addons": "yes"
+      },
+      {
+        "name": "Helmet 4",
+        "Armor": "400",
+        "Addons": "yes"
+      },
+      {
+        "name": "Helmet 6",
+        "Armor": "100",
+        "Addons": "yes"
+      }
+    ],
+    "Armors": [
+      {
+        "name": "Armor 1",
+        "Armor": "100",
+        "Material": "kevlar"
+      },
+      {
+        "name": "Armor 2",
+        "Armor": "200",
+        "Material": "kevlar"
+      },
+      {
+        "name": "Armor 3",
+        "Armor": "50",
+        "Material": "Ceramics"
+      },
+      {
+        "name": "Armor 4",
+        "Armor": "400",
+        "Material": "Ceramics"
+      },
+      {
+        "name": "Armor 6",
+        "Armor": "100",
+        "Material": "Ceramics"
+      }
+    ]
+  },
+  {
+    "Game": "DayZ",
+    "Ammo": [
+      {
+        "Name": "12/70 shot",
+        "types": [
+          {
+            "Name": "12/70 5.25mm Buckshot",
+            "FleshDamage": "8x37",
+            "PenetrationPower": "1",
+            "ArmorDamage": "15",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12/70 8.5 mm 'Magnum' Buckshot",
+            "FleshDamage": "8x50",
+            "PenetrationPower": "2",
+            "ArmorDamage": "26",
+            "Accuracy": "-15",
+            "Recoil": "+115",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12x70 6.5 mm 'Express' Buckshot",
+            "FleshDamage": "9x35",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "+15",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12x70 7mm Buckshot",
+            "FleshDamage": "8x39",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          },
+          {
+            "Name": "12/70 Flechette",
+            "FleshDamage": "8x39",
+            "PenetrationPower": "3",
+            "ArmorDamage": "26",
+            "Accuracy": "0",
+            "Recoil": "0",
+            "FragmentationChance": "0"
+          }
+        ]
+      },
+      {
+        "Name": "12/70 slugs",
+        "types": [
+          {
+            "Name": "12x70 RIP",
+            "FleshDamage": "265",
+            "PenetrationPower": "0",
+            "ArmorDamage": "11",
+            "Accuracy": "80",
+            "Recoil": "35",
+            "FragmentationChance": "100"
+          },
+          {
+            "Name": "12/70 HP Slug 'SuperFormance'",
+            "FleshDamage": "220",
+            "PenetrationPower": "2",
+            "ArmorDamage": "12",
+            "Accuracy": "+170",
+            "Recoil": "-15",
+            "FragmentationChance": "39"
+          },
+          {
+            "Name": "12/70 Grizzly 40 Slug",
+            "FleshDamage": "190",
+            "PenetrationPower": "12",
+            "ArmorDamage": "48",
+            "Accuracy": "+80",
+            "Recoil": "+20",
+            "FragmentationChance": "12"
+          },
+          {
+            "Name": "12/70 HP Slug Copper Sabot Premier",
+            "FleshDamage": "206",
+            "PenetrationPower": "14",
+            "ArmorDamage": "46",
+            "Accuracy": "+150",
+            "Recoil": "+10",
+            "FragmentationChance": "38"
+          },
+          {
+            "Name": "12x70 Led slug",
+            "FleshDamage": "167",
+            "PenetrationPower": "15",
+            "ArmorDamage": "55",
+            "Accuracy": "120",
+            "Recoil": "0",
+            "FragmentationChance": "20"
+          }
+        ]
+      },
+      {
+        "Name": "Type 3",
+        "types": [
+          {
+            "Name": "Ammo31",
+            "FleshDamage": "265",
+            "PenetrationPower": "0",
+            "ArmorDamage": "11",
+            "Accuracy": "80",
+            "Recoil": "35",
+            "FragmentationChance": "100"
+          },
+          {
+            "Name": "Ammo32",
+            "FleshDamage": "220",
+            "PenetrationPower": "2",
+            "ArmorDamage": "12",
+            "Accuracy": "170",
+            "Recoil": "-15",
+            "FragmentationChance": "39"
+          },
+          {
+            "Name": "Ammo33",
+            "FleshDamage": "190",
+            "PenetrationPower": "12",
+            "ArmorDamage": "48",
+            "Accuracy": "80",
+            "Recoil": "20",
+            "FragmentationChance": "12"
+          },
+          {
+            "Name": "Ammo34",
+            "FleshDamage": "206",
+            "PenetrationPower": "14",
+            "ArmorDamage": "46",
+            "Accuracy": "150",
+            "Recoil": "10",
+            "FragmentationChance": "38"
+          },
+          {
+            "Name": "Ammo35",
+            "FleshDamage": "167",
+            "PenetrationPower": "15",
+            "ArmorDamage": "55",
+            "Accuracy": "120",
+            "Recoil": "0",
+            "FragmentationChance": "20"
+          }
+        ]
+      }
+    ],
+    "Helmets": [
+      {
+        "name": "Helmet 1",
+        "Armor": "100",
+        "Addons": "no"
+      },
+      {
+        "name": "Helmet 2",
+        "Armor": "200",
+        "Addons": "no"
+      },
+      {
+        "name": "Helmet 3",
+        "Armor": "50",
+        "Addons": "yes"
+      },
+      {
+        "name": "Helmet 4",
+        "Armor": "400",
+        "Addons": "yes"
+      },
+      {
+        "name": "Helmet 6",
+        "Armor": "100",
+        "Addons": "yes"
+      }
+    ],
+    "Armors": [
+      {
+        "name": "Armor 1",
+        "Armor": "100",
+        "Material": "kevlar"
+      },
+      {
+        "name": "Armor 2",
+        "Armor": "200",
+        "Material": "kevlar"
+      },
+      {
+        "name": "Armor 3",
+        "Armor": "50",
+        "Material": "Ceramics"
+      },
+      {
+        "name": "Armor 4",
+        "Armor": "400",
+        "Material": "Ceramics"
+      },
+      {
+        "name": "Armor 6",
+        "Armor": "100",
+        "Material": "Ceramics"
+      }
+    ]
+  }
+]
