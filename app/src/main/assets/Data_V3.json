@@ -1,6 +1,6 @@
 [
   {
-    "Game": "Escape from tarkov",
+    "Game": "escap_from_tarkov",
     "Ammo": [
       {
         "Name": "12/70 shot",
@@ -209,7 +209,7 @@
     ]
   },
   {
-    "Game": "PUBG",
+    "Game": "pubg",
     "Ammo": [
       {
         "Name": "12/70 shot",
@@ -418,7 +418,7 @@
     ]
   },
   {
-    "Game": "COD",
+    "Game": "cod",
     "Ammo": [
       {
         "Name": "12/70 shot",
@@ -627,7 +627,7 @@
     ]
   },
   {
-    "Game": "DayZ",
+    "Game": "dayz",
     "Ammo": [
       {
         "Name": "12/70 shot",
