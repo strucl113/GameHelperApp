@@ -4,11 +4,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-public class Menu_select extends AppCompatActivity {
+public class MenuSelectActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_e_f_t__menu);
+        setContentView(R.layout.activity_catergory_menu);
     }
 }

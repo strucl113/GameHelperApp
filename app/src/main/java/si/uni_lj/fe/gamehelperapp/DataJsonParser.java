@@ -30,18 +30,25 @@ public class DataJsonParser {
                 Game g = new Game(game);
 
                 // Ammo node is JSON Object
+                if (c.has("Helmets")) {
+                    JSONArray helmets = c.getJSONArray("Helmets");
+                    if (helmets.length() > 0) {
+                        g.catergory.add("Helmets");
+                    }
 
-                JSONArray helmets = c.getJSONArray("Helmets");
-                for (int j = 0; j < helmets.length(); j++) {
-                    JSONObject h = helmets.getJSONObject(j);
-                    Helmet helmet = new Helmet(h.getString("name"));
-                    helmet.Addons = h.getString("Addons");
-                    helmet.Armor = h.getString("Armor");
-                    g.helmets.put(h.getString("name"), helmet);
+                    for (int j = 0; j < helmets.length(); j++) {
+                        JSONObject h = helmets.getJSONObject(j);
+                        Helmet helmet = new Helmet(h.getString("name"));
+                        helmet.Addons = h.getString("Addons");
+                        helmet.Armor = h.getString("Armor");
+                        g.helmets.put(h.getString("name"), helmet);
+                    }
                 }
-
                 //ammo
                 JSONArray ammos = c.getJSONArray("Ammo");
+                if (ammos.length() > 0) {
+                    g.catergory.add("Ammo");
+                }
                 for (int j = 0; j < ammos.length(); j++) {
                     JSONObject am = ammos.getJSONObject(j);
                     Ammo ammo = new Ammo(am.getString("Name"));
@@ -62,13 +69,16 @@ public class DataJsonParser {
 
                     }
                     ammo.types = ammoTypesMap;
-                    g.ammo.put(ammo.name,ammo);
+                    g.ammo.put(ammo.name, ammo);
                 }
 
                 // Helmets node is JSON Object
-
+                if (c.has("Armors")) {
                 // Armor node is JSON Object
                 JSONArray armors = c.getJSONArray("Armors");
+                if (armors.length() > 0) {
+                    g.catergory.add("Armor");
+                }
                 for (int j = 0; j < armors.length(); j++) {
                     JSONObject arm = armors.getJSONObject(j);
                     Armor armor = new Armor(arm.getString("name"));
@@ -77,6 +87,23 @@ public class DataJsonParser {
                     g.armor.put(arm.getString("name"), armor);
 
 
+                }
+            }
+                // Gun node is JSON Object
+                if (c.has("Gun")) {
+                    JSONArray Guns = c.getJSONArray("Gun");
+                    if (Guns.length() > 0) {
+                        g.catergory.add("Guns");
+                    }
+                    for (int j = 0; j < Guns.length(); j++) {
+                        JSONObject gn = Guns.getJSONObject(j);
+                        Gun gun = new Gun(gn.getString("name"));
+                        gun.Type = gn.getString("Type");
+                        gun.Damage = gn.getString("Damage");
+                        g.gun.put(gn.getString("name"), gun);
+
+
+                    }
                 }
                 //
 

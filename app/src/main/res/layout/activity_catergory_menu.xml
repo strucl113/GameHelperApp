@@ -7,7 +7,7 @@
     android:background="#0F313C"
     android:gravity="center"
     android:orientation="vertical"
-    tools:context=".Menu_select">
+    tools:context=".MenuSelectActivity">
 
     <Button
         android:id="@+id/select_a_category_text"
@@ -26,28 +26,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+    <ListView
 
-    <ScrollView
+        android:id="@+id/categoryMenuEFT"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+        android:layout_height="match_parent"
+        android:layout_marginTop="100dp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/select_a_category_text"
-        app:layout_constraintVertical_bias="0.0">
+        app:layout_constraintTop_toTopOf="@+id/select_a_game_text">
 
+    </ListView>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
-
-
-        </LinearLayout>
-
-    </ScrollView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
