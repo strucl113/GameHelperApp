@@ -1,6 +1,8 @@
 package si.uni_lj.fe.gamehelperapp;
 
-public class Helmet {
+import java.io.Serializable;
+
+public class Helmet implements Serializable {
       String name;
       String Armor;
       String Addons;

@@ -1,6 +1,8 @@
 package si.uni_lj.fe.gamehelperapp;
 
-public class Gun {
+import java.io.Serializable;
+
+public class Gun implements Serializable {
      String name;
      String Damage;
      String Type;

@@ -6,7 +6,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DataJsonParser {
@@ -33,7 +32,7 @@ public class DataJsonParser {
                 if (c.has("Helmets")) {
                     JSONArray helmets = c.getJSONArray("Helmets");
                     if (helmets.length() > 0) {
-                        g.catergory.add("Helmets");
+                        g.category.add("Helmets");
                     }
 
                     for (int j = 0; j < helmets.length(); j++) {
@@ -47,7 +46,7 @@ public class DataJsonParser {
                 //ammo
                 JSONArray ammos = c.getJSONArray("Ammo");
                 if (ammos.length() > 0) {
-                    g.catergory.add("Ammo");
+                    g.category.add("Ammo");
                 }
                 for (int j = 0; j < ammos.length(); j++) {
                     JSONObject am = ammos.getJSONObject(j);
@@ -77,7 +76,7 @@ public class DataJsonParser {
                 // Armor node is JSON Object
                 JSONArray armors = c.getJSONArray("Armors");
                 if (armors.length() > 0) {
-                    g.catergory.add("Armor");
+                    g.category.add("Armor");
                 }
                 for (int j = 0; j < armors.length(); j++) {
                     JSONObject arm = armors.getJSONObject(j);
@@ -93,7 +92,7 @@ public class DataJsonParser {
                 if (c.has("Gun")) {
                     JSONArray Guns = c.getJSONArray("Gun");
                     if (Guns.length() > 0) {
-                        g.catergory.add("Guns");
+                        g.category.add("Guns");
                     }
                     for (int j = 0; j < Guns.length(); j++) {
                         JSONObject gn = Guns.getJSONObject(j);

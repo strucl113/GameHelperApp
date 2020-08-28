@@ -1,6 +1,8 @@
 package si.uni_lj.fe.gamehelperapp;
 
-public class AmmoType {
+import java.io.Serializable;
+
+public class AmmoType implements Serializable {
     String name;
     String fleshDamage;
     String penetrationPower;

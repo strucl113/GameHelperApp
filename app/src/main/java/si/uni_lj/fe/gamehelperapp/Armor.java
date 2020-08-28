@@ -1,6 +1,8 @@
 package si.uni_lj.fe.gamehelperapp;
 
-public class Armor {
+import java.io.Serializable;
+
+public class Armor implements Serializable {
      String name;
      String Armor;
      String Material;

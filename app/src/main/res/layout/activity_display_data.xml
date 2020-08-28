@@ -28,7 +28,7 @@
         app:layout_constraintTop_toTopOf="parent" />
     <ListView
 
-        android:id="@+id/categoryMenu"
+        android:id="@+id/categoryMenuEFT"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginTop="100dp"
