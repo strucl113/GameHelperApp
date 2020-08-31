@@ -28,7 +28,7 @@ public class DataJsonParser {
                 String game = c.getString("Game");
                 Game g = new Game(game);
 
-                // Ammo node is JSON Object
+                // Helmet node is JSON Object
                 if (c.has("Helmets")) {
                     JSONArray helmets = c.getJSONArray("Helmets");
                     if (helmets.length() > 0) {
@@ -71,7 +71,7 @@ public class DataJsonParser {
                     g.ammo.put(ammo.name, ammo);
                 }
 
-                // Helmets node is JSON Object
+                // Armor node is JSON Object
                 if (c.has("Armors")) {
                 // Armor node is JSON Object
                 JSONArray armors = c.getJSONArray("Armors");

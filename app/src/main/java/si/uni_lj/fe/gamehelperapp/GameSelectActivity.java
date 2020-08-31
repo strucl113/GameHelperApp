@@ -150,29 +150,7 @@ public class GameSelectActivity extends AppCompatActivity {
         ImageAdapter customAdapter = new ImageAdapter(this, images);
         lv.setAdapter(customAdapter);
 
-        /*
-        lv.setOnItemClickListener(new AdapterView.OnItemClickListener() {
-            @Override
-            public void onItemClick(AdapterView<?> parent, View view,
-                                    int position, long id) {
-
-                String itemID = String.valueOf(id);
-                Toast.makeText(getApplicationContext(), itemID, Toast.LENGTH_SHORT).show();
-                //openNextPage();
-            }
-        }
-
-        ); */
-
-      /*
-
-
-
-
-
-        ); */
     }
-
 
     public void openNextPage(Game g) {
         Intent intent = new Intent(this, MenuSelectActivity.class);
@@ -182,77 +160,6 @@ public class GameSelectActivity extends AppCompatActivity {
 
     }
 
-
-/*
-    class IconicAdapter extends ArrayAdapter {
-        Activity context;
-
-        IconicAdapter(Activity context) {
-            super(context, R.layout.gameselect_list_item, ListElementsArrayList);
-
-            this.context = context;
-        }
-    }
-*/
-
-
-    //generateButtons();
-
-
-    public void setData(Object result) {
-        // ArrayList <String> contactList = new ArrayList<String>(Arrays.asList(game_listShort));
-        //contactList = Arrays.(game_listShort);
-        // ArrayList<HashMap<String, String>> contactList = new Arrays.asList(game_listShort);
-
-        //vizualizacija podatkov
-        //ListAdapter adapter = new SimpleAdapter(this,contactList,R.layout.gameselect_list_item,new String[] {"game","favourite"}, new int[]{R.id.game,R.id.favourite});
-        // lv.setAdapter(adapter);
-    }
-
-
-    /*
-        public void generateButtons() {
-            LinearLayout list = (LinearLayout) findViewById(R.id.layoutGames);
-            for (int game = 0; game < game_list.length; game++) {
-                CheckBox favourite = new CheckBox(this);
-                final Button button = new Button(this);
-           *//* button.setLayoutParams(new LinearLayout.LayoutParams(
-                LinearLayout.LayoutParams()
-        ));
-            button.setId(game);
-            favourite.setId(100 + game);
-
-            list.addView(favourite);
-            list.addView(button);
-            favourite.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-
-                    CheckBox checkBox = (CheckBox) v;
-                    if (checkBox.isChecked()) {
-                        favouriteGame(button.getId());
-                    } else {
-                        unFavouriteGame(button.getId());
-
-                    }
-                }
-            });
-
-
-        }
-
-
-    }
-
-    private void favouriteGame(int game) {
-        Toast.makeText(this, game_list[game] + " favourited", Toast.LENGTH_SHORT).show();
-    }
-
-    private void unFavouriteGame(int game) {
-
-        Toast.makeText(this, game_list[game] + " unfavourited", Toast.LENGTH_SHORT).show();
-
-    }*/
     public int GetGameImage(String name) {
         switch (name) {
             case "escap_from_tarkov":

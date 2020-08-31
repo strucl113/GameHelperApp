@@ -14,6 +14,7 @@ import android.widget.ListAdapter;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -85,19 +86,38 @@ public class MenuSelectActivity extends AppCompatActivity {
         @Override
         public View getView(final int position, View convertView, ViewGroup parent) {
             ImageData img = arrayList.get(position);
+
             if (convertView == null) {
+
                 LayoutInflater layoutInflater = LayoutInflater.from(context);
                 convertView = layoutInflater.inflate(R.layout.gameselect_list_item, null);
                 convertView.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        Intent intent = new Intent(MenuSelectActivity.this,DisplayTableData.class);
+                        intent.putExtra("Category",categoryNames[position].toString());
 
                         String itemID = String.valueOf(position);
-                        Toast.makeText(getApplicationContext(), itemID, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), categoryNames[position].toString(), Toast.LENGTH_SHORT).show();
+                        if (categoryNames[position].equals("Armor")){
+                            intent.putExtra("Data",g.ammo);
+                            startActivity(intent);
 
 
-                        openNextPage(g);
+                        }else if (categoryNames[position].equals("Guns")){
+
+                            intent.putExtra("Data",g.gun);
+                            startActivity(intent);
+                        }else if (categoryNames[position].equals("Helmets")){
+                        intent.putExtra("Data",g.helmets);
+                        startActivity(intent);
+                        }else if (categoryNames[position].equals("Ammo")){
+                            intent.putExtra("Data",g.ammo);
+                            startActivity(intent);
+                        }else
+                            throw new IllegalStateException("Unexpected value: " + categoryNames[position]);
+
+
 
 
                     }
@@ -129,6 +149,7 @@ public class MenuSelectActivity extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
         getWindow().getDecorView().setSystemUiVisibility(
                 View.SYSTEM_UI_FLAG_LAYOUT_STABLE
                         | View.SYSTEM_UI_FLAG_LAYOUT_FULLSCREEN
@@ -137,7 +158,7 @@ public class MenuSelectActivity extends AppCompatActivity {
         g = (Game) getIntent().getExtras().getSerializable("Game");
         //String CatergoryText= String.valueOf(g.category);
         //System.out.println(CatergoryText);
-        super.onCreate(savedInstanceState);
+
         setContentView(R.layout.activity_catergory_menu);
         lv = findViewById(R.id.categoryMenu);
         categoryNames = g.category.toArray();
@@ -156,13 +177,6 @@ public class MenuSelectActivity extends AppCompatActivity {
 
     }
 
-    public void openNextPage(Game g) {
-        Intent intent = new Intent(this,DisplayTableData.class);
-        intent.putExtra("Data",g);
-        startActivity(intent);
-
-
-    }
     public int GetCategoryImage(String name) {
         switch (name) {
             case "Ammo":
