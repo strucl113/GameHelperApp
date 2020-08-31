@@ -9,7 +9,7 @@ public class Game implements Serializable {
     private  static  final long serialVersionUID=1l;
     String name;
     HashMap<String, Ammo> ammo;
-    HashMap<String, Armor> armor;
+    HashMap<String, ArmorEntry> armor;
     HashMap<String, Helmet> helmets;
     HashMap<String, Gun> gun;
     Set<String> category;

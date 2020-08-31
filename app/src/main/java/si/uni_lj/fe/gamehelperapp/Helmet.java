@@ -4,10 +4,12 @@ import java.io.Serializable;
 
 public class Helmet implements Serializable {
       String name;
-      String Armor;
+      int Armor;
       String Addons;
 
-      public Helmet(String name) {
+      public Helmet(String name, int Armor,String Addons) {
             this.name = name;
+            this.Armor=Armor;
+            this.Addons=Addons;
       }
 }

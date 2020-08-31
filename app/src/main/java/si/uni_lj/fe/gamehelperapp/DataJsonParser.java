@@ -80,12 +80,9 @@ public class DataJsonParser {
                 }
                 for (int j = 0; j < armors.length(); j++) {
                     JSONObject arm = armors.getJSONObject(j);
-                    Armor armor = new Armor(arm.getString("name"));
-                    armor.Armor = arm.getString("Armor");
-                    armor.Material = arm.getString("Material");
-                    g.armor.put(arm.getString("name"), armor);
-
-
+                    g.armor.put(arm.getString("name"), new ArmorEntry(arm.getString("name"),
+                            Integer.parseInt(arm.getString("Armor")),
+                            arm.getString("Material")));
                 }
             }
                 // Gun node is JSON Object

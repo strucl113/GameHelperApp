@@ -4,10 +4,12 @@ import java.io.Serializable;
 
 public class Gun implements Serializable {
      String name;
-     String Damage;
+     int Damage;
      String Type;
 
-     public Gun(String name) {
+     public Gun(String name, int Damage,String Type) {
           this.name = name;
+          this.Damage=Damage;
+          this.Type=Type;
      }
 }

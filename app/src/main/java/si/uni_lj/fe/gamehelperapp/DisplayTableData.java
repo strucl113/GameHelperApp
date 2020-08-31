@@ -13,14 +13,17 @@ import android.widget.TextView;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 
 public class DisplayTableData extends AppCompatActivity {
     HashMap d;
     String c;
     String[] items;
-    private ListView lv;
-    private Object[] categoryNames;
+
+    ArrayList<ArmorEntry> armors;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -46,15 +49,59 @@ public class DisplayTableData extends AppCompatActivity {
             material.setText("Addons");
 
         } else if (c.equals("Armor")) {
+            armors = new ArrayList<ArmorEntry>(d.values());
+
             setContentView(R.layout.activity_display_data);
             Button text = findViewById(R.id.display_text);
             text.setText("Armors");
-            TextView name = findViewById(R.id.firstColumn);
-            name.setText("Name");
-            TextView armor = findViewById(R.id.secondColumn);
-            armor.setText("Armor");
-            TextView material=findViewById(R.id.thirdColumn);
-            material.setText("Material");
+            TextView nameTV = findViewById(R.id.firstColumn);
+            nameTV.setText("Name");
+            final TextView armorTV = findViewById(R.id.secondColumn);
+            armorTV.setText("Armor");
+            TextView materialTV = findViewById(R.id.thirdColumn);
+            materialTV.setText("Material");
+
+            final ListView listView = findViewById(R.id.dataListView);
+            listView.setAdapter(new ArmorListViewAdapter(this, armors));
+
+            nameTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(armors, new Comparator<ArmorEntry>() {
+                        @Override
+                        public int compare(ArmorEntry e1, ArmorEntry e2) {
+                            return e1.name.compareTo(e2.name);
+                        }
+                    });
+                    ((ArmorListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
+            armorTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(armors, new Comparator<ArmorEntry>() {
+                        @Override
+                        public int compare(ArmorEntry e1, ArmorEntry e2) {
+                            return e1.armor - e2.armor;
+                        }
+                    });
+                    ((ArmorListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
+            materialTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(armors, new Comparator<ArmorEntry>() {
+                        @Override
+                        public int compare(ArmorEntry e1, ArmorEntry e2) {
+                            return e1.material.compareTo(e2.material);
+                        }
+                    });
+                    ((ArmorListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
 
 
 
@@ -87,9 +134,6 @@ public class DisplayTableData extends AppCompatActivity {
         } else {
             throw new IllegalStateException("Unexpected value: " + c.toString());
         }
-
-
-        lv = findViewById(R.id.listview);
 
 
     }

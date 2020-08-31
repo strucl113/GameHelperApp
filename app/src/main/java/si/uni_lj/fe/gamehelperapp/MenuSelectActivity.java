@@ -100,7 +100,7 @@ public class MenuSelectActivity extends AppCompatActivity {
                         String itemID = String.valueOf(position);
                         Toast.makeText(getApplicationContext(), categoryNames[position].toString(), Toast.LENGTH_SHORT).show();
                         if (categoryNames[position].equals("Armor")){
-                            intent.putExtra("Data",g.ammo);
+                            intent.putExtra("Data",g.armor);
                             startActivity(intent);
 
 

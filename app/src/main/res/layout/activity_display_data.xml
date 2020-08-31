@@ -44,7 +44,8 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="@string/Name"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:clickable="true" />
 
         <TextView
             android:layout_width="0dp"
@@ -70,7 +71,7 @@
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/dataListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="@null"
