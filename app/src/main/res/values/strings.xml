@@ -1,5 +1,30 @@
 <resources>
     <string name="app_name">GameHelperApp</string>
     <string name="select_a_game">Select a game</string>
+    <string name="EFT">Escape From Tarkov</string>
+    <string name="CSGO">Counter-Strike: Global Offensive</string>
+    <string name="COD">COD Warzone</string>
+    <string name="Dayz">Day Z</string>
+    <string name="PUBG">PLAYERUNKNOWNS BATTLEGROUNDS</string>
+    <string name="ammo">Ammo</string>
+    <string name="guns">Guns</string>
+    <string name="armor">Armors</string>
+    <string name="helmets">Helmets</string>
+    <string name="Name">Name</string>
+    <string name="FleshDamage">Flesh Damage</string>
+    <string name="PenetrationPower">Penetration Power</string>
+    <string name="ArmorDamage">Armor Damage</string>
+    <string name="Accuracy">Accuracy</string>
+    <string name="Recoil">Recoil</string>
+    <string name="FragmentationChance">Fragmentation Chance</string>
+    <string name="Damage">Damage</string>
+    <string name="Type">Type</string>
+    <string name="Armor">Armor</string>
+    <string name="Material">Material</string>
+    <string name="Addons">Addons</string>
     <string name="select_a_category">Select a category</string>
+    <string name="select_a_ammo_text">Select ammo</string>
+
+
+
 </resources>

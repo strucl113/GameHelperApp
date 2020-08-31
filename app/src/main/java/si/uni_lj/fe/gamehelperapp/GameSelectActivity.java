@@ -95,7 +95,7 @@ public class GameSelectActivity extends AppCompatActivity {
                         Game g = allData.get(gameNames[position]);
 
                         String itemID = String.valueOf(position);
-                        Toast.makeText(getApplicationContext(), itemID, Toast.LENGTH_SHORT).show();
+                        Toast.makeText(getApplicationContext(), gameNames[position].toString(), Toast.LENGTH_SHORT).show();
                         openNextPage(g);
 
 

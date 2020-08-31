@@ -95,6 +95,8 @@ public class MenuSelectActivity extends AppCompatActivity {
 
                         String itemID = String.valueOf(position);
                         Toast.makeText(getApplicationContext(), itemID, Toast.LENGTH_SHORT).show();
+
+
                         openNextPage(g);
 
 
