@@ -5,13 +5,22 @@ import java.io.Serializable;
 public class AmmoType implements Serializable {
     String name;
     String fleshDamage;
-    String penetrationPower;
-    String armorDamage;
-    String accuracy;
-    String recoil;
-    String fragmentationChance;
+    int penetrationPower;
+    int armorDamage;
+    int accuracy;
+    int recoil;
+    int fragmentationChance;
+
+
     public AmmoType(String name) {
         this.name = name;
+    }
+
+    public AmmoType(String name,String fleshDamage,int penetrationPower,int armorDamage) {
+        this.name = name;
+        this.fleshDamage =fleshDamage;
+        this.penetrationPower=penetrationPower;
+        this.armorDamage=armorDamage;
     }
 }
 

@@ -39,7 +39,7 @@ public class DataJsonParser {
                         JSONObject h = helmets.getJSONObject(j);
                         Helmet helmet = new Helmet(h.getString("name"));
                         helmet.Addons = h.getString("Addons");
-                        helmet.Armor = h.getString("Armor");
+                        helmet.Armor = h.getInt("Armor");
                         g.helmets.put(h.getString("name"), helmet);
                     }
                 }
@@ -57,12 +57,12 @@ public class DataJsonParser {
                     for (int k = 0; k < ammoTypes.length(); k++) {
                         JSONObject ammoType = ammoTypes.getJSONObject(k);
                         AmmoType type = new AmmoType(ammoType.getString("Name"));
-                        type.accuracy = ammoType.getString("Accuracy");
+                        type.accuracy = ammoType.getInt("Accuracy");
                         type.fleshDamage = ammoType.getString("FleshDamage");
-                        type.penetrationPower = ammoType.getString("PenetrationPower");
-                        type.armorDamage = ammoType.getString("ArmorDamage");
-                        type.recoil = ammoType.getString("Recoil");
-                        type.fragmentationChance = ammoType.getString("FragmentationChance");
+                        type.penetrationPower = ammoType.getInt("PenetrationPower");
+                        type.armorDamage = ammoType.getInt("ArmorDamage");
+                        type.recoil = ammoType.getInt("Recoil");
+                        type.fragmentationChance = ammoType.getInt("FragmentationChance");
 
                         ammoTypesMap.put(type.name, type);
 
@@ -95,7 +95,7 @@ public class DataJsonParser {
                         JSONObject gn = Guns.getJSONObject(j);
                         Gun gun = new Gun(gn.getString("name"));
                         gun.Type = gn.getString("Type");
-                        gun.Damage = gn.getString("Damage");
+                        gun.Damage = gn.getInt("Damage");
                         g.gun.put(gn.getString("name"), gun);
 
 

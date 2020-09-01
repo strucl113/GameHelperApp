@@ -12,4 +12,9 @@ public class Helmet implements Serializable {
             this.Armor=Armor;
             this.Addons=Addons;
       }
+      public Helmet(String name) {
+            this.name = name;
+            this.Armor=Armor;
+            this.Addons=Addons;
+      }
 }

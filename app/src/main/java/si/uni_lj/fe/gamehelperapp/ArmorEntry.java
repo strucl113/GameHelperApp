@@ -12,4 +12,10 @@ public class ArmorEntry implements Serializable {
           this.armor = armor;
           this.material = material;
      }
+     public ArmorEntry(String name) {
+          this.name = name;
+          this.armor = armor;
+          this.material = material;
+     }
+
 }

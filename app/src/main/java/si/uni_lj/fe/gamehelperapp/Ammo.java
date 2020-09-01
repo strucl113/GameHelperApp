@@ -10,4 +10,5 @@ public class Ammo implements Serializable {
     public Ammo(String name) {
         this.name = name;
     }
+
 }

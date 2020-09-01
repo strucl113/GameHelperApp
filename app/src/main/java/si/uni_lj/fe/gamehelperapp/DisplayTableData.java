@@ -24,6 +24,8 @@ public class DisplayTableData extends AppCompatActivity {
     String[] items;
 
     ArrayList<ArmorEntry> armors;
+    ArrayList<Helmet> helmets;
+    ArrayList<Gun> guns;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -38,17 +40,64 @@ public class DisplayTableData extends AppCompatActivity {
         c = (String) getIntent().getExtras().getSerializable("Category");
 
         if (c.equals("Helmets")) {
+            helmets = new ArrayList<Helmet>(d.values());
             setContentView(R.layout.activity_display_data);
             Button text = findViewById(R.id.display_text);
             text.setText("Helmets");
-            TextView name = findViewById(R.id.firstColumn);
-            name.setText("Name");
-            TextView armor = findViewById(R.id.secondColumn);
-            armor.setText("Armor");
-            TextView material=findViewById(R.id.thirdColumn);
-            material.setText("Addons");
+            TextView nameTV = findViewById(R.id.firstColumn);
+            nameTV.setText("Name");
+            TextView armorTV = findViewById(R.id.secondColumn);
+            armorTV.setText("Armor");
+            TextView addonsTV = findViewById(R.id.thirdColumn);
+            addonsTV.setText("Addons");
 
-        } else if (c.equals("Armor")) {
+            final ListView listView = findViewById(R.id.dataListView);
+            listView.setAdapter(new HelmetListViewAdapter(this, helmets));
+
+            nameTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(helmets, new Comparator<Helmet>() {
+                        @Override
+                        public int compare(Helmet e1, Helmet e2) {
+                            return e1.name.compareTo(e2.name);
+                        }
+                    });
+                    ((HelmetListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
+            armorTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(helmets, new Comparator<Helmet>() {
+                        @Override
+                        public int compare(Helmet e1, Helmet e2) {
+                            return e1.Armor - e2.Armor;
+                        }
+                    });
+                    ((HelmetListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
+            addonsTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(helmets, new Comparator<Helmet>() {
+                        @Override
+                        public int compare(Helmet e1, Helmet e2) {
+                            return e1.Addons.compareTo(e2.Addons);
+                        }
+                    });
+                    ((HelmetListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
+
+        }
+
+
+        else if (c.equals("Armor")) {
             armors = new ArrayList<ArmorEntry>(d.values());
 
             setContentView(R.layout.activity_display_data);
@@ -104,17 +153,64 @@ public class DisplayTableData extends AppCompatActivity {
             });
 
 
+        }
 
-        } else if (c.equals("Guns")) {
+        else if (c.equals("Guns")) {
+            guns = new ArrayList<Gun>(d.values());
+
+
             setContentView(R.layout.activity_display_data);
             Button text = findViewById(R.id.display_text);
             text.setText("Guns");
-            TextView name = findViewById(R.id.firstColumn);
-            name.setText("Name");
-            TextView armor = findViewById(R.id.secondColumn);
-            armor.setText("Damage");
-            TextView material=findViewById(R.id.thirdColumn);
-            material.setText("Type");
+            TextView nameTV = findViewById(R.id.firstColumn);
+            nameTV.setText("Name");
+            TextView damageTV = findViewById(R.id.secondColumn);
+            damageTV.setText("Damage");
+            TextView typeTV = findViewById(R.id.thirdColumn);
+            typeTV.setText("Type");
+
+            final ListView listView = findViewById(R.id.dataListView);
+            listView.setAdapter(new GunListViewAdapter(this, guns));
+
+            nameTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(helmets, new Comparator<Helmet>() {
+                        @Override
+                        public int compare(Helmet e1, Helmet e2) {
+                            return e1.name.compareTo(e2.name);
+                        }
+                    });
+                    ((HelmetListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
+            damageTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(guns, new Comparator<Gun>() {
+                        @Override
+                        public int compare(Gun e1, Gun e2) {
+                            return e1.Damage - e2.Damage;
+                        }
+                    });
+                    ((GunListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
+            typeTV.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(guns, new Comparator<Gun>() {
+                        @Override
+                        public int compare(Gun e1, Gun e2) {
+                            return e1.Type.compareTo(e2.Type);
+                        }
+                    });
+                    ((GunListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
 
         } else if (c.equals("Ammo")) {
             setContentView(R.layout.activity_display_data_ammo);
