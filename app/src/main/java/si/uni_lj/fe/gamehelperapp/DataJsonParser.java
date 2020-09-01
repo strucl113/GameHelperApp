@@ -6,6 +6,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 public class DataJsonParser {
@@ -15,7 +16,6 @@ public class DataJsonParser {
 
     public static HashMap<String, Game> parseToArrayList(String jsonStr) {
         HashMap<String, Game> gamesMap = new HashMap<>();
-        HashMap<String, AmmoType> ammoTypesMap = new HashMap<>();
         try {
 //            JSONObject jsonObj = new JSONObject(jsonStr);
             JSONArray jsonArr = new JSONArray(jsonStr);
@@ -52,6 +52,8 @@ public class DataJsonParser {
                     JSONObject am = ammos.getJSONObject(j);
                     Ammo ammo = new Ammo(am.getString("Name"));
 
+
+                    ArrayList<AmmoType> ammoTypesAL = new ArrayList<>();
                     JSONArray ammoTypes = ammos.getJSONObject(j).getJSONArray("types");
                     // AmmoType node is JSON Object
                     for (int k = 0; k < ammoTypes.length(); k++) {
@@ -64,10 +66,9 @@ public class DataJsonParser {
                         type.recoil = ammoType.getInt("Recoil");
                         type.fragmentationChance = ammoType.getInt("FragmentationChance");
 
-                        ammoTypesMap.put(type.name, type);
-
+                        ammoTypesAL.add(type);
                     }
-                    ammo.types = ammoTypesMap;
+                    ammo.types = ammoTypesAL;
                     g.ammo.put(ammo.name, ammo);
                 }
 

@@ -40,13 +40,14 @@
         app:layout_constraintTop_toBottomOf="@+id/select_a_ammo_text">
 
         <TextView
-            android:layout_width="0dp"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="center"
             android:padding="5dp"
             android:text="@string/Name"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:id="@+id/firstColumn"/>
 
         <TextView
             android:layout_width="0dp"
@@ -55,7 +56,8 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="@string/FleshDamage"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:id="@+id/secondColumn" />
 
         <TextView
             android:layout_width="0dp"
@@ -64,7 +66,8 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="@string/PenetrationPower"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:id="@+id/dreiColumn" />
         <TextView
             android:layout_width="0dp"
             android:layout_height="wrap_content"
@@ -72,17 +75,18 @@
             android:gravity="center"
             android:padding="5dp"
             android:text="@string/ArmorDamage"
-            android:textColor="#ffffff" />
+            android:textColor="#ffffff"
+            android:id="@+id/cetrtiStolpec"/>
 
     </LinearLayout>
 
     <ListView
-        android:id="@+id/listview"
+        android:id="@+id/dataListView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:divider="@null"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/relativeLayout1" />
+        app:layout_constraintTop_toBottomOf="@+id/relativeLayout2" />
 
 
 

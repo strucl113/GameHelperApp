@@ -11,8 +11,8 @@
     <string name="armor">Armors</string>
     <string name="helmets">Helmets</string>
     <string name="Name">Name</string>
-    <string name="FleshDamage">Flesh Damage</string>
-    <string name="PenetrationPower">Penetration Power</string>
+    <string name="FleshDamage">Flesh   Damage</string>
+    <string name="PenetrationPower">Pen. Power</string>
     <string name="ArmorDamage">Armor Damage</string>
     <string name="Accuracy">Accuracy</string>
     <string name="Recoil">Recoil</string>

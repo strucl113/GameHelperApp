@@ -9,25 +9,25 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-public class HelmetListViewAdapter extends BaseAdapter {
+public class AmmoListViewAdapter extends BaseAdapter {
 
-    public ArrayList<Helmet> entries;
+    public Ammo ammo;
     Activity activity;
 
-    public HelmetListViewAdapter(Activity activity, ArrayList<Helmet> entries) {
+    public AmmoListViewAdapter(Activity activity, Ammo ammo) {
         super();
         this.activity = activity;
-        this.entries = entries;
+        this.ammo = ammo;
     }
 
     @Override
     public int getCount() {
-        return this.entries.size();
+        return this.ammo.types.size();
     }
 
     @Override
     public Object getItem(int position) {
-        return this.entries.get(position);
+        return this.ammo.types.get(position);
     }
 
     @Override
@@ -40,17 +40,19 @@ public class HelmetListViewAdapter extends BaseAdapter {
         LayoutInflater inflater = activity.getLayoutInflater();
 
         if (convertView == null) {
-            convertView = inflater.inflate(R.layout.helmet_row, null);
+            convertView = inflater.inflate(R.layout.ammo_row, null);
         }
 
         TextView nameTV = convertView.findViewById(R.id.name);
-        TextView armorTV = convertView.findViewById(R.id.armor);
-        TextView addonsTV = convertView.findViewById(R.id.addon);
+        TextView fleshDamageTV = convertView.findViewById(R.id.FleshDamage);
+        TextView penetrationPowerTV = convertView.findViewById(R.id.PenetrationPower);
+        TextView armorDamageTV = convertView.findViewById(R.id.ArmorDamage);
 
-        Helmet item = entries.get(position);
+        AmmoType item = ammo.types.get(position);
         nameTV.setText(item.name);
-        armorTV.setText(Integer.toString(item.Armor));
-        addonsTV.setText(item.Addons);
+        fleshDamageTV.setText(item.fleshDamage);
+        penetrationPowerTV.setText(Integer.toString(item.penetrationPower));
+        armorDamageTV.setText(Integer.toString(item.armorDamage));
 
         return convertView;
     }

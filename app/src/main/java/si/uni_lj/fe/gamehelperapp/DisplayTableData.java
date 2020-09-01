@@ -2,6 +2,7 @@ package si.uni_lj.fe.gamehelperapp;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -26,6 +27,7 @@ public class DisplayTableData extends AppCompatActivity {
     ArrayList<ArmorEntry> armors;
     ArrayList<Helmet> helmets;
     ArrayList<Gun> guns;
+    ArrayList<Ammo> ammo;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -55,47 +57,54 @@ public class DisplayTableData extends AppCompatActivity {
             listView.setAdapter(new HelmetListViewAdapter(this, helmets));
 
             nameTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
                 @Override
                 public void onClick(View v) {
                     Collections.sort(helmets, new Comparator<Helmet>() {
                         @Override
                         public int compare(Helmet e1, Helmet e2) {
-                            return e1.name.compareTo(e2.name);
+                            return (sort) ? e1.name.compareTo(e2.name) : e2.name.compareTo(e1.name);
                         }
                     });
+
+                    sort = !sort;
                     ((HelmetListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
                 }
             });
 
             armorTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
                 @Override
                 public void onClick(View v) {
                     Collections.sort(helmets, new Comparator<Helmet>() {
                         @Override
                         public int compare(Helmet e1, Helmet e2) {
-                            return e1.Armor - e2.Armor;
+                            return (sort) ? e1.Armor - e2.Armor : e2.Armor - e1.Armor;
                         }
                     });
+                    sort = !sort;
                     ((HelmetListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
                 }
             });
 
             addonsTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
                 @Override
                 public void onClick(View v) {
                     Collections.sort(helmets, new Comparator<Helmet>() {
                         @Override
                         public int compare(Helmet e1, Helmet e2) {
-                            return e1.Addons.compareTo(e2.Addons);
+                            return (sort) ? e1.Addons.compareTo(e2.Addons) : e2.Addons.compareTo(e1.Addons);
+
                         }
                     });
+                    sort = !sort;
                     ((HelmetListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
                 }
             });
 
 
         }
-
 
         else if (c.equals("Armor")) {
             armors = new ArrayList<ArmorEntry>(d.values());
@@ -114,40 +123,47 @@ public class DisplayTableData extends AppCompatActivity {
             listView.setAdapter(new ArmorListViewAdapter(this, armors));
 
             nameTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
                 @Override
                 public void onClick(View v) {
                     Collections.sort(armors, new Comparator<ArmorEntry>() {
                         @Override
                         public int compare(ArmorEntry e1, ArmorEntry e2) {
-                            return e1.name.compareTo(e2.name);
+                            return (sort) ? e1.name.compareTo(e2.name) : e2.name.compareTo(e1.name);
                         }
                     });
+                    sort = !sort;
                     ((ArmorListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
                 }
             });
 
             armorTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
                 @Override
                 public void onClick(View v) {
                     Collections.sort(armors, new Comparator<ArmorEntry>() {
                         @Override
                         public int compare(ArmorEntry e1, ArmorEntry e2) {
-                            return e1.armor - e2.armor;
+                            return (sort) ? e1.armor - e2.armor : e2.armor - e1.armor;
+
                         }
                     });
+                    sort = !sort;
                     ((ArmorListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
                 }
             });
 
             materialTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
                 @Override
                 public void onClick(View v) {
                     Collections.sort(armors, new Comparator<ArmorEntry>() {
                         @Override
                         public int compare(ArmorEntry e1, ArmorEntry e2) {
-                            return e1.material.compareTo(e2.material);
+                            return (sort) ? e1.material.compareTo(e2.material): e2.material.compareTo(e1.material);
                         }
                     });
+                    sort = !sort;
                     ((ArmorListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
                 }
             });
@@ -173,48 +189,146 @@ public class DisplayTableData extends AppCompatActivity {
             listView.setAdapter(new GunListViewAdapter(this, guns));
 
             nameTV.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Collections.sort(helmets, new Comparator<Helmet>() {
-                        @Override
-                        public int compare(Helmet e1, Helmet e2) {
-                            return e1.name.compareTo(e2.name);
-                        }
-                    });
-                    ((HelmetListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
-                }
-            });
-
-            damageTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
                 @Override
                 public void onClick(View v) {
                     Collections.sort(guns, new Comparator<Gun>() {
                         @Override
                         public int compare(Gun e1, Gun e2) {
-                            return e1.Damage - e2.Damage;
+                            return (sort) ? e1.name.compareTo(e2.name) : e2.name.compareTo(e1.name);
                         }
                     });
+                    sort = !sort;
+                    ((GunListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
+                }
+            });
+
+            damageTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
+                @Override
+                public void onClick(View v) {
+                    Collections.sort(guns, new Comparator<Gun>() {
+                        @Override
+                        public int compare(Gun e1, Gun e2) {
+                            return (sort) ? e1.Damage - e2.Damage : e2.Damage - e1.Damage;
+                        }
+                    });
+                    sort = !sort;
                     ((GunListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
                 }
             });
 
             typeTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
                 @Override
                 public void onClick(View v) {
                     Collections.sort(guns, new Comparator<Gun>() {
                         @Override
                         public int compare(Gun e1, Gun e2) {
-                            return e1.Type.compareTo(e2.Type);
+                            return (sort) ? e1.Type.compareTo(e2.Type) : e2.Type.compareTo(e1.Type);
                         }
                     });
+                    sort = !sort;
                     ((GunListViewAdapter) listView.getAdapter()).notifyDataSetChanged();
                 }
             });
 
 
-        } else if (c.equals("Ammo")) {
+        }
+
+        else if (c.equals("Ammo")) {
             setContentView(R.layout.activity_display_data_ammo);
             Spinner dropdown = findViewById(R.id.select_a_ammo_text);
+
+            ammo = new ArrayList<Ammo>(d.values());
+            final ListView listView = findViewById(R.id.dataListView);
+
+            dropdown.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+                @Override
+                public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                    listView.setAdapter(new AmmoListViewAdapter(DisplayTableData.this, ammo.get(position)));
+                }
+
+                @Override
+                public void onNothingSelected(AdapterView<?> parent) {
+
+                }
+            });
+
+            TextView nameTV = findViewById(R.id.firstColumn);
+            TextView fleshDamageTV = findViewById(R.id.secondColumn);
+            TextView penetrationPowerTV = findViewById(R.id.dreiColumn);
+            TextView armorDamageTV = findViewById(R.id.cetrtiStolpec);
+
+            nameTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
+                @Override
+                public void onClick(View v) {
+                    AmmoListViewAdapter adapter = (AmmoListViewAdapter) listView.getAdapter();
+
+                    Collections.sort(adapter.ammo.types, new Comparator<AmmoType>() {
+                        @Override
+                        public int compare(AmmoType e1, AmmoType e2) {
+                            return (sort) ? e1.name.compareTo(e2.name) : e2.name.compareTo(e1.name);
+                        }
+                    });
+
+                    sort = !sort;
+                    adapter.notifyDataSetChanged();
+                }
+            });
+
+            fleshDamageTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
+                @Override
+                public void onClick(View v) {
+                    AmmoListViewAdapter adapter = (AmmoListViewAdapter) listView.getAdapter();
+
+                    Collections.sort(adapter.ammo.types, new Comparator<AmmoType>() {
+                        @Override
+                        public int compare(AmmoType e1, AmmoType e2) {
+                            return (sort) ? e1.fleshDamage.compareTo(e2.fleshDamage) : e2.fleshDamage.compareTo(e1.fleshDamage);
+
+                        }
+                    });
+                    sort = !sort;
+                    adapter.notifyDataSetChanged();
+                }
+            });
+
+            penetrationPowerTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
+                @Override
+                public void onClick(View v) {
+                    AmmoListViewAdapter adapter = (AmmoListViewAdapter) listView.getAdapter();
+
+                    Collections.sort(adapter.ammo.types, new Comparator<AmmoType>() {
+                        @Override
+                        public int compare(AmmoType e1, AmmoType e2) {
+                            return (sort) ? e1.penetrationPower - e2.penetrationPower : e2.penetrationPower - e1.penetrationPower;
+                        }
+                    });
+                    sort = !sort;
+                    adapter.notifyDataSetChanged();
+                }
+            });
+
+            armorDamageTV.setOnClickListener(new View.OnClickListener() {
+                private boolean sort = false;
+                @Override
+                public void onClick(View v) {
+                    AmmoListViewAdapter adapter = (AmmoListViewAdapter) listView.getAdapter();
+
+                    Collections.sort(adapter.ammo.types, new Comparator<AmmoType>() {
+                        @Override
+                        public int compare(AmmoType e1, AmmoType e2) {
+                            return (sort) ? e1.armorDamage - e2.armorDamage : e2.armorDamage - e1.armorDamage;
+                        }
+                    });
+                    sort = !sort;
+                    adapter.notifyDataSetChanged();
+                }
+            });
 
             Object[] imena = d.keySet().toArray();
             items = new String[imena.length];
