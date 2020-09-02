@@ -37,6 +37,8 @@ public class AmmoListViewAdapter extends BaseAdapter {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
+        //if there is no items in layout inflate it and fill it with selected items.
+
         LayoutInflater inflater = activity.getLayoutInflater();
 
         if (convertView == null) {
